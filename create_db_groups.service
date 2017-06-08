@@ -1,0 +1,10 @@
+[Unit]
+Description=Create DB Groups
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/bin/create_db_groups.sh
+
+[Install]
+WantedBy=custom.target

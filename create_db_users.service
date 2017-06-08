@@ -1,0 +1,10 @@
+[Unit]
+Description=Create DB User
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/bin/create_db_users.sh
+
+[Install]
+WantedBy=custom.target

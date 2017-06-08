@@ -1,0 +1,10 @@
+[Unit]
+Description=Configure DB
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/bin/config_db.sh
+
+[Install]
+WantedBy=custom.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Enable PostGIS
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/bin/bash /usr/bin/enable_postgis.sh
+
+[Install]
+WantedBy=custom.target

@@ -1,0 +1,7 @@
+services:
+  - docker
+install:
+  - docker build -t sdal/pg-ldap-ssh-c7 .
+  - docker run -dit -v /sys/fs/cgroup:/sys/fs/cgroup:ro --cap-add=SYS_ADMIN sdal/pg-ldap-ssh-c7
+script:
+- docker ps | grep -q sdal/pg-ldap-ssh-c7

@@ -45,7 +45,7 @@ RUN yum -y install postgis2_96
 
 # TCP/IP port
 RUN mkdir -p /var/lib/pgsql/data/  && \
-    echo tcpip_socket = true >> /var/lib/pgsql/data/postgresql.conf
+    echo "tcpip_socket = true" >> /var/lib/pgsql/data/postgresql.conf
 
 # Add VOLUMEs to allow backup of config, logs and databases
 #VOLUME  ["/etc/pgsql", "/var/log/pgsql", "/var/lib/pgsql"]

@@ -1,5 +1,5 @@
 #!/bin/bash
-variable="$(getent group sdal | cut -d':' -f4)"
+variable="$(getent group lightfoot | cut -d':' -f4)"
 IFS=","
 for name in $variable
 do
